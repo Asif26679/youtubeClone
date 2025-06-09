@@ -49,7 +49,7 @@ const NavBar = ({ onHamburgerClick }) => {
           placeholder="Search"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex-grow px-4 py-2 border border-gray-300 rounded-l-full focus:outline-none focus:ring-1 focus:ring-red-500"
+          className="flex-grow px-4 py-2 border border-gray-300 rounded-l-full focus:outline-none focus:ring-1 focus:ring-red-500 hidden md:block"
         />
         <button
           type="submit"

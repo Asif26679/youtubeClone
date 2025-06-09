@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import SuggestedVideos from "./SuggestedVideo";
 
 const VideoDetail = () => {
   const { id } = useParams();
@@ -36,6 +37,10 @@ const VideoDetail = () => {
         {Number(statistics.viewCount).toLocaleString()} views •{" "}
         {Number(statistics.likeCount).toLocaleString()} likes
       </div>
+      <div className="w-full md:w-1/3">
+    <h2 className="text-lg font-bold mb-4">Suggested Videos</h2>
+    <SuggestedVideos videoId={id} />
+  </div>
     </div>
   );
 };
